@@ -7,9 +7,11 @@ const variables = require('./variables');
 // connect to database
 class DB {
     constructor() {}
-    connect() => {
+    connect() {
         mongoose.connect(variables.db, () => {
             console.log('db connected...');
         })
     }
 }
+
+module.exports = new DB();
