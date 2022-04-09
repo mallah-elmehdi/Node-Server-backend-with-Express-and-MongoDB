@@ -16,11 +16,11 @@ const getProduct = async (req, res, next) => {
     try {
         const data = await productModel.find({
             $or: [
-                {title: { $regex: req.body.keyword, $options: "i" }},
-                {description: { $regex: req.body.keyword, $options: "i" }}
+                {title: { $regex: req.body.keyword.toString(), $options: "i" }},
+                {description: { $regex: req.body.keyword.toString(), $options: "i" }}
             ]
         });
-        return res.status(200);
+        return res.status(200).json(data);
     } catch (err) {
         return next(err);
     }
