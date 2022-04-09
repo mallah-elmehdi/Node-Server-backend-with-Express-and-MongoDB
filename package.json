@@ -1,0 +1,28 @@
+{
+  "name": "Node-Server-backend-with-Express-and-MongoDB",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallah-elmehdi/Node-Server-backend-with-Express-and-MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mallah-elmehdi/Node-Server-backend-with-Express-and-MongoDB/issues"
+  },
+  "homepage": "https://github.com/mallah-elmehdi/Node-Server-backend-with-Express-and-MongoDB#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
