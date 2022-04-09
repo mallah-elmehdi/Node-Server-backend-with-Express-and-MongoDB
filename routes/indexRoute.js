@@ -3,7 +3,7 @@ const express = require('express');
 
 // handler
 const indexHandler = require('../handler/indexHandler');
-// const errorHandler = require('../handler/errorHandler');
+const errorHandler = require('../handler/errorHandler');
 
 // set up the router
 const router = express.Router();
@@ -13,7 +13,11 @@ router
     .route('/')
     .get(
         indexHandler.getIndex,
-        // errorHandler.globalError
+        errorHandler.globalError
+    );
+    .post(
+        indexHandler.getProduct,
+        errorHandler.globalError
     );
 
 // exports

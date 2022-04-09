@@ -15,13 +15,11 @@ app.use('/public', express.static(path.join(__dirname, 'static')));
 
 // routes
 const indexRoute = require('./routes/indexRoute');
-// const userRoute = require('./routes/userRoute');
-// const errorHandler = require('./handler/errorHandler');
+const errorHandler = require('./handler/errorHandler');
 
 // middleware
 app.use("/", indexRoute);
-// app.use("/user", userRoute);
-// app.use("*", errorHandler.notFound);
+app.use("*", errorHandler.notFound);
 
 // start the server
 app.listen(variables.port, () => {
