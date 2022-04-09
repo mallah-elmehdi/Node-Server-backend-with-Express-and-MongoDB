@@ -9,5 +9,6 @@ dotenv.config({
 
 // export
 module.exports = {
-    port: process.env.PORT
+    port: process.env.PORT,
+    db: process.env.DB.replace('<password>', process.env.DB_PASSWORD)
 }

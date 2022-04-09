@@ -10,5 +10,5 @@ const app = express();
 // start the server
 app.listen(variables.port, (err) => {
     if (err) console.error(err);
-    else console.log('runing...');
+    else console.log('runing on port ' + variables.port + '...');
 })
