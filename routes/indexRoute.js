@@ -14,7 +14,7 @@ router
     .get(
         indexHandler.getIndex,
         errorHandler.globalError
-    );
+    )
     .post(
         indexHandler.getProduct,
         errorHandler.globalError

@@ -16,8 +16,8 @@ const getProduct = async (req, res, next) => {
     try {
         const data = await productModel.find({
             $or: [
-                {title: { $regex: req.query.keyword, $options: "i" }},
-                {description: { $regex: req.query.keyword, $options: "i" }}
+                {title: { $regex: req.body.keyword, $options: "i" }},
+                {description: { $regex: req.body.keyword, $options: "i" }}
             ]
         });
         return res.status(200);
@@ -28,4 +28,5 @@ const getProduct = async (req, res, next) => {
 
 module.exports = {
     getIndex,
+    getProduct
 }

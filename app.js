@@ -1,6 +1,8 @@
 // modules
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+
 // variables
 const variables = require('./config/variables');
 
@@ -12,6 +14,11 @@ const app = express();
 
 // serve static files
 app.use('/public', express.static(path.join(__dirname, 'static')));
+
+// parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
 
 // routes
 const indexRoute = require('./routes/indexRoute');
